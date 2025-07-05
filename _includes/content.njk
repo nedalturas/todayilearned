@@ -1,4 +1,19 @@
-<div class="content">
 
-    this is the content
+
+<div class="content">
+    <div id="content-area">
+        <h1>Select a topic</h1>
+        <p>Choose from the sidebar to view content here.</p>
+    </div>
 </div>
+
+<script>
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const content = e.target.dataset.content;
+        const title = e.target.dataset.title;
+        document.getElementById('content-area').innerHTML = content;
+    });
+});
+</script>

@@ -1,6 +1,6 @@
 <!doctype html>
 <head>
-    <title>Page title</title>
+    <title>title of the page</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <div class="container">
@@ -15,11 +15,31 @@
     <div class="content_container">
 
     <div class="sidebar">
-    this is the sidebar
-</div>
-    <div class="content">
+    this is the sidebar<a href="#" data-content="<h1>Javascript basics</h1>
+" data-title="intro">
+            intro
+        </a><a href="#" data-content="<h1>do we really need to?</h1>
+" data-title="secondary intro?">
+            secondary intro?
+        </a></div>
+    
 
-    this is the content
+<div class="content">
+    <div id="content-area">
+        <h1>Select a topic</h1>
+        <p>Choose from the sidebar to view content here.</p>
+    </div>
 </div>
+
+<script>
+document.querySelectorAll('.sidebar a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const content = e.target.dataset.content;
+        const title = e.target.dataset.title;
+        document.getElementById('content-area').innerHTML = content;
+    });
+});
+</script>
     </div>
 </div>

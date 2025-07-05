@@ -1,8 +1,7 @@
-<div class="sidebar">
-    this is the sidebar
+<aside class="sidebar">
     {%- for post in collections.contents -%}
         <a href="#" data-content="{{ post.templateContent | safe }}" data-title="{{ post.data.title }}">
             {{ post.data.title }}
         </a>
     {%- endfor -%}
-</div>
+</aside>

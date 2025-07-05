@@ -5,29 +5,26 @@
 </head>
 <div class="container">
     <nav class="nav">
-  <div class="nav__logo">
-    <a href="/">T.I.L</a>
-  </div>
-  <div class="nav__links">
-    <a href="/about">About</a>
-  </div>
+    <div class="nav__logo">
+      <a href="/">T.I.L</a>
+    </div>
+    <div class="nav__links">
+      <a href="/about">About</a>
+    </div>
 </nav>
     <div class="content_container">
 
-    <div class="sidebar">
-    this is the sidebar<a href="#" data-content="<h1>Javascript basics</h1>
+    <aside class="sidebar"><a href="#" data-content="<h1>Javascript basics</h1>
 " data-title="intro">
             intro
-        </a><a href="#" data-content="<h1>do we really need to?</h1>
+        </a><a href="#" data-content="<h1>do we really need to?:</h1>
 " data-title="secondary intro?">
             secondary intro?
-        </a></div>
+        </a></aside>
     
 
 <div class="content">
     <div id="content-area">
-        <h1>Select a topic</h1>
-        <p>Choose from the sidebar to view content here.</p>
     </div>
 </div>
 
@@ -35,6 +32,11 @@
 document.querySelectorAll('.sidebar a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
+
+        document.querySelectorAll('.sidebar a').forEach(l => l.classList.remove('active'));
+        
+        // Add active class to clicked link
+        e.target.classList.add('active');
         const content = e.target.dataset.content;
         const title = e.target.dataset.title;
         document.getElementById('content-area').innerHTML = content;
@@ -42,4 +44,8 @@ document.querySelectorAll('.sidebar a').forEach(link => {
 });
 </script>
     </div>
+
+    <div class="footer">
+    &copy; todayIlearned by nedalturas 2025
+</div>
 </div>

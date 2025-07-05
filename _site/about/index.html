@@ -1,0 +1,45 @@
+<!doctype html>
+
+<head>
+    <title>title of the page</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav">
+    <div class="nav__logo">
+      <a href="/">T.I.L</a>
+    </div>
+    <div class="nav__links">
+      <a href="/about">About</a>
+    </div>
+</nav>
+
+        <ul class="about_list">
+            <li>
+                <strong>About this page:</strong><p>A place to write my thoughts and what I learned</p>
+            </li>
+            <li>
+                <strong>Created by:</strong>
+                <p>Ned Alturas</p>
+            </li>
+        </ul>
+
+
+        <div class="footer">
+    &copy; todayIlearned by nedalturas 2025
+</div>
+    </div>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>

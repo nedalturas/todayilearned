@@ -1,0 +1,36 @@
+<!doctype html>
+
+<head>
+    <title>title of the page</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        {% include "nav.njk"%}
+
+        <ul class="about_list">
+            <li>
+                <strong>About this page:</strong><p>A place to write my thoughts and what I learned</p>
+            </li>
+            <li>
+                <strong>Created by:</strong>
+                <p>Ned Alturas</p>
+            </li>
+        </ul>
+
+
+        {% include "footer.njk"%}
+    </div>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>

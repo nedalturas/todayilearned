@@ -1,4 +1,57 @@
-*{
+* {
     margin: 0;
     padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+
+@media (min-width: 400px) {
+    .container {
+        width: 85%;
+        padding: 0;
+    }
+}
+
+
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+    .container {
+        width: 80%;
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: whitesmoke;
+}
+
+.nav__logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content_container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 30%;
+    border-right: 1px solid black;
+}
+
+.content{
+    width: 70%;
 }

@@ -1,9 +1,13 @@
 <!doctype html>
-
 <head>
     <title>Page title</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<p>Hi</p>
-{% include "nav.njk"%}
+<div class="container">
+    {% include "nav.njk"%}
+    <div class="content_container">
 
+    {% include "sidebar.njk"%}
+    {% include "content.njk"%}
+    </div>
+</div>

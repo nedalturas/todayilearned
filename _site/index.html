@@ -3,8 +3,9 @@
     <title>title of the page</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<div class="container">
-    <nav class="nav">
+<body>
+    <div class="container">
+        <nav class="nav">
     <div class="nav__logo">
       <a href="/">T.I.L</a>
     </div>
@@ -12,16 +13,15 @@
       <a href="/about">About</a>
     </div>
 </nav>
-    <div class="content_container">
-
-    <aside class="sidebar"><a href="#" data-content="<h1>Javascript basics</h1>
+        <div class="content_container">
+            <aside class="sidebar"><a href="#" data-content="<h1>Javascript basics</h1>
 " data-title="intro">
             intro
         </a><a href="#" data-content="<h1>do we really need to?:</h1>
 " data-title="secondary intro?">
             secondary intro?
         </a></aside>
-    
+            
 
 <div class="content">
     <div id="content-area">
@@ -43,9 +43,20 @@ document.querySelectorAll('.sidebar a').forEach(link => {
     });
 });
 </script>
-    </div>
-
-    <div class="footer">
+        </div>
+        <div class="footer">
     &copy; todayIlearned by nedalturas 2025
 </div>
-</div>
+    </div>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>

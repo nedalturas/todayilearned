@@ -3,13 +3,24 @@
     <title>title of the page</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
-<div class="container">
-    {% include "nav.njk"%}
-    <div class="content_container">
-
-    {% include "sidebar.njk"%}
-    {% include "content.njk"%}
+<body>
+    <div class="container">
+        {% include "nav.njk"%}
+        <div class="content_container">
+            {% include "sidebar.njk"%}
+            {% include "content.njk"%}
+        </div>
+        {% include "footer.njk"%}
     </div>
-
-    {% include "footer.njk"%}
-</div>
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+</body>

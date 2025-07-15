@@ -1,6 +1,6 @@
 {
-  recommendations: {
+  "recommendations": [
     "vscodevim.vim",
     "ginfuru.better-nunjucks"
-  }
+  ]
 }

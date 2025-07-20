@@ -26,5 +26,19 @@ tags: contents
 
 9. Check if a number is prime.
 
-10. Guess the number game (computer picks a number from 1–10, user keeps guessing until correct).
+1﻿0. Guess the number game (computer picks a number from 1 through 10, user keeps guessing until correct).
+
+\# Solutions:
+
+1. Print numbers from 1 to 10.
+
+_My Solution:_
+
+
+
+```js
+  for(i = 0; i <= 10; i++){
+    console.log(i);
+  }
+```
 

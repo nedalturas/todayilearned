@@ -3,10 +3,7 @@ title: Javascript Challenges
 date: 2025-07-19T14:22:26.850Z
 tags: contents
 ---
-
-
 \# Challenges
-
 
 1. \[x] Print numbers from 1 to 10.
 
@@ -22,7 +19,7 @@ tags: contents
 
 7. Find the maximum number in an array \[3, 7, 2, 9, 4].
 
-8. Create a simple calculator (supports +, -, \*, /).
+8. Create a simple calculator (supports +, -, *, /).
 
 9. Check if a number is prime.
 
@@ -32,13 +29,10 @@ tags: contents
 
 1. Print numbers from 1 to 10.
 
-_My Solution:_
+*My Solution:*
 
-
-
-```js
+```javascript
   for(i = 0; i <= 10; i++){
     console.log(i);
   }
 ```
-

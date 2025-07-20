@@ -89,7 +89,7 @@
 .content {
     width: 70%;
     padding: 2rem;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .content h1 {
